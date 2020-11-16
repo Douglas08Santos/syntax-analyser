@@ -8,7 +8,7 @@
 
 %}
 
-alpha 			                    [A-Za-z_]
+alpha 			                    [*a-zA-Z_|a-zA-Z_]
 fl			                        (f|F|l|L)
 ul			                        (u|U|l|L)*
 digit 			                    [0-9]
@@ -88,6 +88,7 @@ int                                 { if(!COMMENT) return (INT); }
 float                               { if(!COMMENT) return (FLOAT); }
 char                                { if(!COMMENT) return (CHAR); }
 void                                { if(!COMMENT) return (VOID); }
+
 
 if                                  { if(!COMMENT) return (IF); }
 else                                { if(!COMMENT) return (ELSE); }
